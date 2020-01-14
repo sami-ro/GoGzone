@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Experience Table</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+          <div id="menu">
+            <a href="index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content" id="skill-list">
+                <a href="skills/melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="skills/ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="skills/magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="skills/thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="skills/woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="skills/fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="skills/mining.html"><button class="list-button">Mining</button></a>
+                <a href="skills/smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="skills/fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="skills/cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="skills/firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="skills/alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="skills/crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="skills/construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+  <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+  <div class="dropdown-content" id="item-list">
+    <ul class="dropdown-list">
+      <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+      <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+      <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+      <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+      <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+      <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+    </ul>
+  </div>
+</div>-->
+        </div>
+
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Experience Table</h2>
+
+          <br>
+
+          <table>
+            <tr>
+              <th>Level</th>
+              <th>Total Exp. Needed</th>
+              <th>Exp. to Next Level</th>
+            </tr>
+
+             <tr><td>1</td><td>0</td><td>61</td></tr>
+             <tr><td>2</td><td>61</td><td>70</td></tr>
+             <tr><td>3</td><td>131</td><td>126</td></tr>
+             <tr><td>4</td><td>257</td><td>205</td></tr>
+             <tr><td>5</td><td>462</td><td>305</td></tr>
+             <tr><td>6</td><td>767</td><td>429</td></tr>
+             <tr><td>7</td><td>1,196</td><td>579</td></tr>
+             <tr><td>8</td><td>1,775</td><td>756</td></tr>
+             <tr><td>9</td><td>2,531</td><td>962</td></tr>
+             <tr><td>10</td><td>3,493</td><td>1,195</td></tr>
+             <tr><td>11</td><td>4,688</td><td>1,461</td></tr>
+             <tr><td>12</td><td>6,149</td><td>1,756</td></tr>
+             <tr><td>13</td><td>7,905</td><td>2,085</td></tr>
+             <tr><td>14</td><td>9,990</td><td>2,446</td></tr>
+             <tr><td>15</td><td>12,436</td><td>2,843</td></tr>
+             <tr><td>16</td><td>15,279</td><td>3,273</td></tr>
+             <tr><td>17</td><td>18,552</td><td>3,740</td></tr>
+             <tr><td>18</td><td>22,292</td><td>4,243</td></tr>
+             <tr><td>19</td><td>26,535</td><td>4,785</td></tr>
+             <tr><td>20</td><td>31,320</td><td>5,363</td></tr>
+             <tr><td>21</td><td>36,683</td><td>5,982</td></tr>
+             <tr><td>22</td><td>42,665</td><td>6,640</td></tr>
+             <tr><td>23</td><td>49,305</td><td>7,338</td></tr>
+             <tr><td>24</td><td>56,643</td><td>8,077</td></tr>
+             <tr><td>25</td><td>64,720</td><td>8,859</td></tr>
+             <tr><td>26</td><td>73,579</td><td>9,682</td></tr>
+             <tr><td>27</td><td>83,261</td><td>10,548</td></tr>
+             <tr><td>28</td><td>93,809</td><td>11,458</td></tr>
+             <tr><td>29</td><td>105,267</td><td>12,413</td></tr>
+             <tr><td>30</td><td>117,680</td><td>13,411</td></tr>
+             <tr><td>31</td><td>131,091</td><td>14,457</td></tr>
+             <tr><td>32</td><td>145,548</td><td>15,547</td></tr>
+             <tr><td>33</td><td>161,095</td><td>16,683</td></tr>
+             <tr><td>34</td><td>177,778</td><td>17,868</td></tr>
+             <tr><td>35</td><td>195,646</td><td>19,100</td></tr>
+             <tr><td>36</td><td>214,746</td><td>20,380</td></tr>
+             <tr><td>37</td><td>235,126</td><td>21,708</td></tr>
+             <tr><td>38</td><td>256,834</td><td>23,086</td></tr>
+             <tr><td>39</td><td>279,920</td><td>24,514</td></tr>
+             <tr><td>40</td><td>304,434</td><td>25,991</td></tr>
+             <tr><td>41</td><td>330,425</td><td>27,520</td></tr>
+             <tr><td>42</td><td>357,945</td><td>29,100</td></tr>
+             <tr><td>43</td><td>387,045</td><td>30,730</td></tr>
+             <tr><td>44</td><td>417,775</td><td>32,415</td></tr>
+             <tr><td>45</td><td>450,190</td><td>34,150</td></tr>
+             <tr><td>46</td><td>484,340</td><td>35,939</td></tr>
+             <tr><td>47</td><td>520,279</td><td>37,782</td></tr>
+             <tr><td>48</td><td>558,061</td><td>39,679</td></tr>
+             <tr><td>49</td><td>597,740</td><td>41,629</td></tr>
+             <tr><td>50</td><td>639,369</td><td>43,636</td></tr>
+             <tr><td>51</td><td>683,005</td><td>45,696</td></tr>
+             <tr><td>52</td><td>728,701</td><td>47,814</td></tr>
+             <tr><td>53</td><td>776,515</td><td>49,986</td></tr>
+             <tr><td>54</td><td>826,501</td><td>52,216</td></tr>
+             <tr><td>55</td><td>878,717</td><td>54,502</td></tr>
+             <tr><td>56</td><td>933,219</td><td>56,846</td></tr>
+             <tr><td>57</td><td>990,065</td><td>59,248</td></tr>
+             <tr><td>58</td><td>1,049,313</td><td>61,707</td></tr>
+             <tr><td>59</td><td>1,111,020</td><td>64,226</td></tr>
+             <tr><td>60</td><td>1,175,246</td><td>66,803</td></tr>
+             <tr><td>61</td><td>1,242,049</td><td>69,439</td></tr>
+             <tr><td>62</td><td>1,311,488</td><td>72,136</td></tr>
+             <tr><td>63</td><td>1,383,624</td><td>74,892</td></tr>
+             <tr><td>64</td><td>1,458,516</td><td>77,709</td></tr>
+             <tr><td>65</td><td>1,536,225</td><td>80,587</td></tr>
+             <tr><td>66</td><td>1,616,812</td><td>83,526</td></tr>
+             <tr><td>67</td><td>1,700,338</td><td>86,527</td></tr>
+             <tr><td>68</td><td>1,786,865</td><td>89,589</td></tr>
+             <tr><td>69</td><td>1,876,454</td><td>92,714</td></tr>
+             <tr><td>70</td><td>1,969,168</td><td>95,901</td></tr>
+             <tr><td>71</td><td>2,065,069</td><td>99,152</td></tr>
+             <tr><td>72</td><td>2,164,221</td><td>102,466</td></tr>
+             <tr><td>73</td><td>2,266,687</td><td>105,844</td></tr>
+             <tr><td>74</td><td>2,372,531</td><td>109,285</td></tr>
+             <tr><td>75</td><td>2,481,816</td><td>112,792</td></tr>
+             <tr><td>76</td><td>2,594,608</td><td>116,362</td></tr>
+             <tr><td>77</td><td>2,710,970</td><td>119,999</td></tr>
+             <tr><td>78</td><td>2,830,969</td><td>123,700</td></tr>
+             <tr><td>79</td><td>2,954,669</td><td>127,467</td></tr>
+             <tr><td>80</td><td>3,082,136</td><td>130,301</td></tr>
+             <tr><td>81</td><td>3,212,437</td><td>136,200</td></tr>
+             <tr><td>82</td><td>3,348,637</td><td>139,166</td></tr>
+             <tr><td>83</td><td>3,487,803</td><td>143,201</td></tr>
+             <tr><td>84</td><td>3,631,004</td><td>147,301</td></tr>
+             <tr><td>85</td><td>3,778,305</td><td>151,469</td></tr>
+             <tr><td>86</td><td>3,929,774</td><td>155,707</td></tr>
+             <tr><td>87</td><td>4,085,481</td><td>160,011</td></tr>
+             <tr><td>88</td><td>4,245,492</td><td>164,385</td></tr>
+             <tr><td>89</td><td>4,409,877</td><td>168,827</td></tr>
+             <tr><td>90</td><td>4,578,704</td><td>173,339</td></tr>
+             <tr><td>91</td><td>4,752,043</td><td>177,921</td></tr>
+             <tr><td>92</td><td>4,929,964</td><td>182,572</td></tr>
+             <tr><td>93</td><td>5,112,536</td><td>187,293</td></tr>
+             <tr><td>94</td><td>5,299,829</td><td>192,085</td></tr>
+             <tr><td>95</td><td>5,491,914</td><td>196,948</td></tr>
+             <tr><td>96</td><td>5,688,862</td><td>201,881</td></tr>
+             <tr><td>97</td><td>5,890,743</td><td>206,887</td></tr>
+             <tr><td>98</td><td>6,097,630</td><td>211,963</td></tr>
+             <tr><td>99</td><td>6,309,593</td><td>217,112</td></tr>
+             <tr><td>100</td><td>6,526,705</td><td>-</td></tr>
+          </table>
+
+
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

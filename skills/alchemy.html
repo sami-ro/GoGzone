@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Alchemy</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry, won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+
+          <div id="menu">
+            <a href="../index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content-selected" id="skill-list">
+                <a href="melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="mining.html"><button class="list-button">Mining</button></a>
+                <a href="smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="alchemy.html"><button class="list-button list-button-selected">Alchemy</button></a>
+                <a href="crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="../npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="../world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="../exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+            <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+            <div class="dropdown-content" id="item-list">
+              <ul class="dropdown-list">
+                <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+                <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+                <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+                <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+                <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+                <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show-selected");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Alchemy</h2>
+          <p>With alchemy you will create spells and teleports using clay pots, ashes and essence. Spells are used in <a href="magic.html">Magic Combat</a>
+            while teleports instantly move you to a specific location. A certain level of Magic Focus is required to cast both.</p>
+            <p>Shards, which you turn into essence using a pestle & mortar (can be bought from the General Store for 4 coins),
+              are obtained from incinerating items with <a href="firemaking.html">Firemaking</a>.</p>
+            <p>To make a pot of ashes simply combine ashes with a clay pot, this will provide 10 alchemy experience.</p>
+
+            <h3>Shards <i class="fas fa-arrow-right" style="font-size: 16px;"></i> Essence</h3>
+
+            <p>To turn your shards into essence, simply use the shards with a pestle & mortar. <br> 100 shards equal 1 essence.</p>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Shard/Essence Type</th>
+                <th>Exp.</th>
+                <th>Shard</th>
+                <th>Essence</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Air</td>
+                <td>1</td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/air-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/air-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Water</td>
+                <td>2</td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/water-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/water-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>6</td>
+                <td>Earth</td>
+                <td>3</td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/earth-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/earth-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Fire</td>
+                <td>4</td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/fire-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/fire-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>16</td>
+                <td>Metal</td>
+                <td>6</td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/metal-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/metal-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Sharp</td>
+                <td>7</td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/sharp-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/sharp-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>28</td>
+                <td>Force</td>
+                <td></td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/force-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/force-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>34</td>
+                <td>Poison</td>
+                <td></td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/poison-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/poison-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Nature</td>
+                <td></td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/nature-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/nature-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Void</td>
+                <td></td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/void-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/void-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>70</td>
+                <td>Bind</td>
+                <td></td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/bind-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/bind-essence.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>80</td>
+                <td>Soul</td>
+                <td></td>
+                <td><div class ="table-image-container-extra-small"><img class="table-image" src="../images/resources/soul-shard.png"></div></td>
+                <td><div class ="table-image-container-small"><img class="table-image" src="../images/resources/soul-essence.png"></div></td>
+              </tr>
+            </table>
+
+          <h3>Spells</h3>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Spell Type</th>
+                <th>Items Needed (quantity)</th>
+                <th>Exp.</th>
+                <th>Spell</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Air Strike</td>
+                <td>Air Essence (1), Pot of Ashes (1)</td>
+                <td>15</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/air-strike.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Water Strike</td>
+                <td>Water Essence (1), Pot of Ashes (1)</td>
+                <td>25</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/water-strike.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Earth Strike</td>
+                <td>Earth Essence (1), Pot of Ashes (1)</td>
+                <td>35</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/earth-strike.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>30</td>
+                <td>Fire Strike</td>
+                <td>Fire Essence (1), Pot of Ashes (1)</td>
+                <td>45</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/fire-strike.png"></div></td>
+              </tr>
+            </table>
+
+            <h3>Teleports</h3>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Teleport Destination</th>
+                <th>Items Needed (quantity)</th>
+                <th>Exp.</th>
+                <th>Teleport</th>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Town</td>
+                <td>Air Essence (3), Void Essence (1),<br> Pot of Ashes (1)</td>
+                <td>20</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/town-teleport.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>15</td>
+                <td>Cadgwith</td>
+                <td>Air Essence (2), Water Essence (1),<br> Void Essence (1), Pot of Ashes (1)</td>
+                <td>35</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/cabin-teleport.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>25</td>
+                <td>Volcano</td>
+                <td>Air Essence (2), Earth Essence (1),<br> Void Essence (1), Pot of Ashes (1)</td>
+                <td>50</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/village-teleport.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>35</td>
+                <td>Island</td>
+                <td>Air Essence (2), Fire Essence (1),<br> Void Essence (1), Pot of Ashes (1)</td>
+                <td>65</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/island-teleport.png"></div></td>
+              </tr>
+            </table>
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

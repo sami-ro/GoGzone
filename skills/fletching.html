@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Fletching</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style>
+
+    .cell-left-border {
+      border-left: 1px solid black;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry, won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+
+          <div id="menu">
+            <a href="../index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content-selected" id="skill-list">
+                <a href="melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="fletching.html"><button class="list-button list-button-selected">Fletching</button></a>
+                <a href="mining.html"><button class="list-button">Mining</button></a>
+                <a href="smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="../npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="../world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="../exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+            <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+            <div class="dropdown-content" id="item-list">
+              <ul class="dropdown-list">
+                <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+                <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+                <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+                <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+                <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+                <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show-selected");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Fletching</h2>
+          <p>In fletching you will use a knife (can be bought from the General Store for 4 coins) to create bows and arrows using logs, bow strings (made with <a href="crafting.html">Crafting</a>),
+            feathers and arrowheads (made with <a href="smithing.html">Smithing</a>).</p>
+
+            <h3>Arrows</h3>
+            <p>Arrows are created by making arrow shafts to which you then add a feather (dropped by chickens) and an arrow head.
+            Arrow shafts don't have different tiers, but you will get a higher number of shafts from higher tier logs. Adding a feather to the arrow shaft grants 5 fletching experience
+            while adding an arrowhead grants experience depending on the tier of the arrowheads.</p>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Log Type</th>
+                <th>Arrow Shaft Exp.</th>
+                <th># of Shafts</th>
+                <th>Arrowhead Type</th>
+                <th>Arrowhead Exp.</th>
+                <th>Arrow</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Log</td>
+                <td>20</td>
+                <td>5</td>
+                <td>Copper</td>
+                <td>5</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/copper-arrows.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Oak</td>
+                <td>40</td>
+                <td>10</td>
+                <td>Iron</td>
+                <td>10</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/iron-arrows.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Ash</td>
+                <td>60</td>
+                <td>15</td>
+                <td>Steel</td>
+                <td>15</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/steel-arrows.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>30</td>
+                <td>Fur</td>
+                <td>80</td>
+                <td>20</td>
+                <td>Nelenite</td>
+                <td>20</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/nelenite-arrows.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>40</td>
+                <td>King Maple</td>
+                <td>100</td>
+                <td>25</td>
+                <td>Gothite</td>
+                <td>25</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/gothite-arrows.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Magic</td>
+                <td>120</td>
+                <td>30</td>
+                <td>Osmium</td>
+                <td>30</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/osmium-arrows.png"></div></td>
+              </tr>
+            </table>
+
+            <h3>Bows</h3>
+            <p>Bows are created by making unstrung bows from logs and then adding a bowstring to them.</p>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Log Type</th>
+                <th>Exp.</th>
+                <th>Unstrung Bow</th>
+                <th>Level</th>
+                <th>String Exp.</th>
+                <th>Bow</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Log</td>
+                <td>30</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/unstrung-bow.png"></div></td>
+                <td class="cell-left-border">1</td>
+                <td>25</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/bow.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>15</td>
+                <td>Oak</td>
+                <td>60</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/unstrung-oak-bow.png"></div></td>
+                <td class="cell-left-border">10</td>
+                <td>50</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/oak-bow.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>25</td>
+                <td>Ash</td>
+                <td>90</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/unstrung-ash-bow.png"></div></td>
+                <td class="cell-left-border">20</td>
+                <td>75</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/ash-bow.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>35</td>
+                <td>Fur</td>
+                <td>120</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/unstrung-fur-bow.png"></div></td>
+                <td class="cell-left-border">30</td>
+                <td>100</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/fur-bow.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>45</td>
+                <td>King Maple</td>
+                <td>150</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/unstrung-king-maple-bow.png"></div></td>
+                <td class="cell-left-border">40</td>
+                <td>125</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/king-maple-bow.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>55</td>
+                <td>Magic</td>
+                <td>180</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/unstrung-magic-bow.png"></div></td>
+                <td class="cell-left-border">50</td>
+                <td>150</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/equipment/magic-bow.png"></div></td>
+              </tr>
+            </table>
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

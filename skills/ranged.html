@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ranged Combat</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry, won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+
+          <div id="menu">
+            <a href="../index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content-selected" id="skill-list">
+                <a href="melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="ranged.html"><button class="list-button list-button-selected">Ranged Combat</button></a>
+                <a href="magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="mining.html"><button class="list-button">Mining</button></a>
+                <a href="smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="../npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="../world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="../exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+            <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+            <div class="dropdown-content" id="item-list">
+              <ul class="dropdown-list">
+                <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+                <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+                <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+                <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+                <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+                <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show-selected");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Ranged Combat</h2>
+
+          <p>Ranged combat consists of three skills: <br> <span style ="word-spacing: -1px; letter-spacing: -0.2px;"><strong>Ranged Focus</strong> which determines what tier bows and arrows you can equip and
+            your accuracy in battle.</span><br>
+            <strong>Ranged Power</strong> which determines how much damage you deal with ranged weapons.<br>
+            <strong>Ranged Defense</strong> which determines what tier armors you can equip and your defensive capabilites against ranged attacks.</p>
+            <p>Experience is gained for each attack and is equal to damage dealt times ten. You pick which skill you want to train by
+            selecting which type of attack you want to use from the combat menu.</p>
+            <p>Bows and arrows are made using <strong><a href="fletching.html">Fletching</a></strong> and some can be bought from vendors.</p>
+
+            <h3>Bows and Arrows</h3>
+            <p>What tier bows and arrows you can equip are determined by your Ranged Focus level. <br> Hover over images for stats.</p>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Bow Type</th>
+                <th>Bow</th>
+                <th>Arrow Type</th>
+                <th>Arrow</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Bow</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/bow.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>4</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>4</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>1</strong>
+                  </span></div></td>
+                <td>Copper</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/copper-arrows.png"></div>
+                <span class="tooltip-text">
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>4</strong>
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>4</strong>
+                </span></div></td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Oak</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/oak-bow.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>8</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>8</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>2</strong>
+                  </span></div></td>
+                <td>Iron</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/iron-arrows.png"></div>
+                <span class="tooltip-text">
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>8</strong>
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>8</strong>
+                </span></div></td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Ash</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/ash-bow.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>12</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>12</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp; &nbsp;<strong>3</strong>
+                  </span></div></td>
+                <td>Steel</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/steel-arrows.png"></div>
+                <span class="tooltip-text">
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>12</strong>
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>12</strong>
+                </span></div></td>
+              </tr>
+
+              <tr>
+                <td>30</td>
+                <td>Fur</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/fur-bow.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>16</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>16</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp; &nbsp;<strong>4</strong>
+                  </span></div></td>
+                <td>Nelenite</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/nelenite-arrows.png"></div>
+                <span class="tooltip-text">
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>16</strong>
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>16</strong>
+                </span></div></td>
+              </tr>
+
+              <tr>
+                <td>40</td>
+                <td>King Maple</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/king-maple-bow.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>20</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>20</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp; &nbsp;<strong>5</strong>
+                  </span></div></td>
+                <td>Gothite</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/gothite-arrows.png"></div>
+                <span class="tooltip-text">
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>20</strong>
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>20</strong>
+                </span></div></td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Magic</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/magic-bow.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>24</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>24</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp; &nbsp;<strong>6</strong>
+                  </span></div></td>
+                <td>Osmium</td>
+                <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/osmium-arrows.png"></div>
+                <span class="tooltip-text">
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>24</strong>
+                  <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>24</strong>
+                </span></div></td>
+              </tr>
+              </tfoot>
+
+            </table>
+
+            <h3>Armor</h3>
+            <p>What tier armors you can equip are determined by your Ranged Defense level. Current ranged armors available are chainhelm, chainbody and chainlegs. Hover over images for stats.</p>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Type</th>
+                <th>Chainhelm</th>
+                <th>Chainlegs</th>
+                <th>Chainbody</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Copper</td>
+                <td><div class="tooltip"><div class="table-image-container-small"><img class="table-image" src="../images/equipment/copper-chainhelm.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/melee-defense.png"><strong>1</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png"><strong>1</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"><strong>1</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>5</strong>
+                  </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/copper-chainlegs.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>2</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>2</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>2</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-2</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-2</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-1</strong>
+                    </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/copper-chainbody.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>3</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>3</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>3</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>10</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-2</strong>
+                    </span></div></td>
+              </tr>
+
+
+              <tr>
+                <td>10</td>
+                <td>Iron</td>
+                <td><div class="tooltip"><div class="table-image-container-small"><img class="table-image" src="../images/equipment/iron-chainhelm.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>2</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>2</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>2</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>10</strong>
+                  </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/iron-chainlegs.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>16</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-4</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-2</strong>
+                    </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/iron-chainbody.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>20</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-4</strong>
+                    </span></div></td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Steel</td>
+                <td><div class="tooltip"><div class="table-image-container-small"><img class="table-image" src="../images/equipment/steel-chainhelm.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>3</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>3</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>3</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>15</strong>
+                  </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/steel-chainlegs.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>24</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-6</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-3</strong>
+                    </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/steel-chainbody.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp; &nbsp;<strong>9</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp; &nbsp;<strong>9</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp; &nbsp;<strong>9</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>30</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-6</strong>
+                    </span></div></td>
+              </tr>
+
+              <tr>
+                <td>30</td>
+                <td>Nelenite</td>
+                <td><div class="tooltip"><div class="table-image-container-small"><img class="table-image" src="../images/equipment/nelenite-chainhelm.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>4</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>4</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>4</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>20</strong>
+                  </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/nelenite-chainlegs.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp; &nbsp;<strong>8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp; &nbsp;<strong>8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp; &nbsp;<strong>8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>32</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-8</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-4</strong>
+                    </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/nelenite-chainbody.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png"&nbsp;><strong>12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>40</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-16</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-16</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp;<strong>-8</strong>
+                    </span></div></td>
+              </tr>
+
+              <tr>
+                <td>40</td>
+                <td>Gothite</td>
+                <td><div class="tooltip"><div class="table-image-container-small"><img class="table-image" src="../images/equipment/gothite-chainhelm.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>5</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>5</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>5</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>25</strong>
+                  </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/gothite-chainlegs.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>10</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>10</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>10</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>40</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-20</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-20</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp;<strong>-5</strong>
+                    </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/gothite-chainbody.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>15</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>15</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>15</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>50</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-20</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-20</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-10</strong>
+                    </span></div></td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Osmium</td>
+                <td><div class="tooltip"><div class="table-image-container-small"><img class="table-image" src="../images/equipment/osmium-chainhelm.png"></div>
+                  <span class="tooltip-text">
+                    <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>6</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>6</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>6</strong>
+                    <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png"><strong>30</strong>
+                  </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/osmium-chainlegs.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png">&nbsp;<strong>12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>48</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-12</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png">&nbsp;<strong>-5</strong>
+                    </span></div></td>
+
+                  <td><div class="tooltip"><div class="table-image-container"><img class="table-image" src="../images/equipment/osmium-chainbody.png"></div>
+                    <span class="tooltip-text">
+                      <img class="tooltip-image" src="../images/skills/combat/melee-defense.png">&nbsp;<strong>18</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-focus.png">&nbsp;<strong>18</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-power.png"&nbsp;><strong>18</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/ranged-defense.png">&nbsp;<strong>60</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-focus.png"><strong>-24</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-power.png"><strong>-24</strong>
+                      <img class="tooltip-image" src="../images/skills/combat/magic-defense.png"><strong>-12</strong>
+                    </span></div></td>
+              </tr>
+              </tfoot>
+
+            </table>
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

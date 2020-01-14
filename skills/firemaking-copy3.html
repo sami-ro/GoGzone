@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Firemaking</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <style>
+      .air {
+        border-left: 1px solid white;
+      }
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry, won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+
+          <div id="menu">
+            <a href="../index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content-selected" id="skill-list">
+                <a href="melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="mining.html"><button class="list-button">Mining</button></a>
+                <a href="smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="firemaking.html"><button class="list-button list-button-selected">Firemaking</button></a>
+                <a href="alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="../exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+            <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+            <div class="dropdown-content" id="item-list">
+              <ul class="dropdown-list">
+                <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+                <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+                <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+                <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+                <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+                <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show-selected");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Firemaking</h2>
+          <p>Firemaking is used to incinerate items for carbon and shards as well as making open fires using logs and matches (can be bought from the General Store for 2 coins a piece), which you then
+            can cook fish over. When the fire goes out a pile of ashes will be left behind. Carbon, shards and ashes are used in <a href="alchemy.html">Alchemy</a>.</p>
+
+            <h3>Burning Logs</h3>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Log type</th>
+                <th># of Ashes</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Lumber</td>
+                <td>1-2</td>
+                <td>25</td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Oak</td>
+                <td>2-5</td>
+                <td>50</td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Ash</td>
+                <td>7-10</td>
+                <td>75</td>
+              </tr>
+
+              <tr>
+                <td>30</td>
+                <td>Fur</td>
+                <td>13-18</td>
+                <td>100</td>
+              </tr>
+
+              <tr>
+                <td>40</td>
+                <td>King-Maple</td>
+                <td>20-25</td>
+                <td>125</td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Magic</td>
+                <td>28-35</td>
+                <td>150</td>
+              </tr>
+            </table>
+
+            <h3>Incineration</h3>
+            Jump to levels: <a href="#10">10-19</a> |
+            <a href="#20">20-29</a> |
+            <a href="#30">30-39</a> |
+            <a href="#40">40-49</a> |
+            <a href="#50">50-59</a> |
+            <a href="#60">60-69</a> |
+
+            <br><br>
+
+            <div class="table-sticky">
+              <table>
+                <col>
+                <col>
+                <col>
+                <colgroup>
+                  <col class="left">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="air">
+                  <col class="right">
+                </colgroup>
+              <caption>Levels 1-9</caption>
+              <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th><img style="width: 15px;" src="../images/resources/air-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/water-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/earth-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/fire-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/metal-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/void-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/sharp-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/force-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/poison-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/nature-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/bind-shard.png"></th>
+                <th><img style="width: 15px;" src="../images/resources/cyan-shard.png"></th>
+              </div>
+
+              </tr>
+
+              <tr>
+                <td>1</td> <td>Coins</td> <td>1</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->1</td> <td><!--Fire--></td> <td><!--Metal-->1</td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>1</td> <td>Matchbox</td> <td>1</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->1</td> <td><!--Fire-->5</td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>1</td> <td>Arrow Shafts</td> <td>1</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->1</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->1</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>1</td><td>Logs</td> <td>5</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->4</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->4</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>2</td> <td>Feathers</td> <td>1</td> <td><!--Air-->2</td> <td><!--Water--></td>
+                <td><!--Earth--></td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->1</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>2</td> <td>Fishing Net</td> <td>2</td> <td><!--Air--></td> <td><!--Water-->1</td>
+                <td><!--Earth-->1</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind-->4</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>2</td> <td>Pestle & Mortar</td> <td>5</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->8</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force-->3</td> <td><!--Poison--></td> <td><!--Nature-->1</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>3</td> <td>Thread</td> <td>1</td> <td><!--Air-->1</td> <td><!--Water--></td>
+                <td><!--Earth-->2</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Clay</td> <td>2</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->8</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->1</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+                              </tr>
+
+              <tr>
+                <td>4</td> <td>Flax</td> <td>2</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->2</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->2</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Bowstring</td> <td>3</td> <td><!--Air-->2</td> <td><!--Water--></td>
+                <td><!--Earth-->8</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->4</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Clothing</td> <td></td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth--></td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Blue Wizard Bottom</td> <td>30</td> <td><!--Air-->13</td> <td><!--Water-->4</td>
+                <td><!--Earth-->8</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->4</td> <td><!--Bind-->3</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Blue Wizard Top</td> <td>30</td> <td><!--Air-->16</td> <td><!--Water--></td>
+                <td><!--Earth-->9</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->5</td> <td><!--Bind-->4</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Green Wizard Bottom</td> <td>40</td> <td><!--Air-->16</td> <td><!--Water-->6</td>
+                <td><!--Earth-->10</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->8</td> <td><!--Bind-->6</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Green Wizard Top</td> <td>40</td> <td><!--Air-->20</td> <td><!--Water--></td>
+                <td><!--Earth-->12</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->10</td> <td><!--Bind-->8</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Purple Wizard Bottom</td> <td>50</td> <td><!--Air-->19</td> <td><!--Water-->8</td>
+                <td><!--Earth-->12</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->12</td> <td><!--Bind-->8</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Purple Wizard Top</td> <td>50</td> <td><!--Air-->24</td> <td><!--Water--></td>
+                <td><!--Earth-->15</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->15</td> <td><!--Bind-->12</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Burgundy Wizard Bottom</td> <td>60</td> <td><!--Air-->22</td> <td><!--Water-->10</td>
+                <td><!--Earth-->14</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->16</td> <td><!--Bind-->12</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>4</td> <td>Burgundy Wizard Top</td> <td>60</td> <td><!--Air-->28</td> <td><!--Water--></td>
+                <td><!--Earth-->18</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->20</td> <td><!--Bind-->16</td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>5</td> <td>Raw Shrimp</td> <td>3</td> <td><!--Air--></td> <td><!--Water-->25</td>
+                <td><!--Earth--></td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->2</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>5</td> <td>Saw</td> <td>3</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->1</td> <td><!--Fire--></td> <td><!--Metal-->2</td> <td><!--Void--></td>
+                <td><!--Sharp-->1</td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>5</td> <td>Knife</td> <td>2</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth--></td> <td><!--Fire--></td> <td><!--Metal-->1</td> <td><!--Void--></td>
+                <td><!--Sharp-->2</td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>6</td> <td>Needle</td> <td>1</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth--></td> <td><!--Fire--></td> <td><!--Metal-->1</td> <td><!--Void--></td>
+                <td><!--Sharp-->2</td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>7</td> <td>Shrimp</td> <td>4</td> <td><!--Air--></td> <td><!--Water-->5</td>
+                <td><!--Earth--></td> <td><!--Fire-->10</td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->5</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>7</td> <td>Unstrung Bow</td> <td>3</td> <td><!--Air-->22</td> <td><!--Water--></td>
+                <td><!--Earth-->22</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp-->1</td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature-->5</td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>8</td> <td>Ashes</td> <td>2</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->4</td> <td><!--Fire-->2</td> <td><!--Metal--></td> <td><!--Void-->1</td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>8</td> <td>Hammer</td> <td>2</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->8</td> <td><!--Fire--></td> <td><!--Metal-->8</td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force-->2</td> <td><!--Poison--></td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+
+              <tr>
+                <td>9</td> <td>Burnt Shrimp</td> <td>1</td> <td><!--Air--></td> <td><!--Water--></td>
+                <td><!--Earth-->1</td> <td><!--Fire--></td> <td><!--Metal--></td> <td><!--Void--></td>
+                <td><!--Sharp--></td> <td><!--Force--></td> <td><!--Poison-->2</td> <td><!--Nature--></td> <td><!--Bind--></td> <td><!--Cyan--></td>
+              </tr>
+            </table>
+
+            <br>
+
+            <table id="10">
+              <caption>Levels 10-19</caption>
+                <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th>Shards</th>
+                <th>Essence</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>10</td> <td>Oak Logs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>10</td> <td>Raw Sardine</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>12</td> <td>Copper Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>12</td> <td>Unstrung Oak Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>13</td> <td>Clay Pot</td> <td>3</td> <td>Earth (8), Nature (5), Fire (2)</td> <td></td> <td>3</td>
+              </tr>
+
+              <tr>
+                <td>13</td> <td>Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>13</td> <td>Clay Pot</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>16</td> <td>Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>16</td> <td>Iron Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>17</td> <td>Unstrung Ash Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>18</td> <td>Oak Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>18</td> <td>Copper Chainhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>18</td> <td>Copper Ore</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>19</td> <td>Pot of Ashes</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+            </table>
+
+            <br>
+
+            <table id="20">
+              <caption>Levels 20-29</caption>
+                <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th>Shards</th>
+                <th>Essence</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>20</td> <td>Ash Logs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>20</td> <td>Copper Chainlegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>20</td> <td>Copper Bar</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>20</td> <td>Steel Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>22</td> <td>Blue Cloth</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>22</td> <td>Iron Chainhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>22</td> <td>Copper Helmet</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>22</td> <td>Unstrung Fur Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>23</td> <td>Mullet</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>23</td> <td>Ash Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>24</td> <td>Iron Ore</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>24</td> <td>Copper Axe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>24</td> <td>Copper Chainbody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>24</td> <td>Nelenite Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>25</td> <td>Iron Bar</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>25</td> <td>Iron Chainlegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>25</td> <td>Blue Wizard Hat</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>25</td> <td>Copper Dagger</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>26</td> <td>Copper Pickaxe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>26</td> <td>Steel Chainhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>27</td> <td>Copper Sword</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>27</td> <td>Unstrung King Maple Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>28</td> <td>Boxfish</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>28</td> <td>Green Cloth</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>28</td> <td>Iron Helmet</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>28</td> <td>Iron Axe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>28</td> <td>Gothite Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>28</td> <td>Fur Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>29</td> <td>Iron Dagger</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+            </table>
+
+            <br>
+
+            <table id="30">
+              <caption>Levels 30-39</caption>
+                <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th>Shards</th>
+                <th>Essence</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Fur Logs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Coal</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Iron Pickaxe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Raw Starslug</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Steel Bar</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Green Wizard Hat</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Iron Chainbody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Copper Platelegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Steel Chainlegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>30</td> <td>Nelenite Chainhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>32</td> <td>Unstrung Magic Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>32</td> <td>Steel Axe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>32</td> <td>Copper Fullhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>32</td> <td>Iron Sword</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>32</td> <td>Osmium Arrowheads</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>33</td> <td>Steel Dagger</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>33</td> <td>King Maple Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>34</td> <td>Steel Helmet</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>34</td> <td>Purple Cloth</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>34</td> <td>Steel Pickaxe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>34</td> <td>Iron Platelegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>34</td> <td>Gothite Chainhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>35</td> <td>Purple Wizard Hat</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>35</td> <td>Nelenite Bar</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>35</td> <td>Nelenite Chainlegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>36</td><td>Nelenite Ore</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>36</td> <td>Nelenite Axe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>36</td> <td>Steel Chainbody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>37</td> <td>Steel Sword</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>37</td> <td>Nelenite Dagger</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>38</td> <td>Nelenite Pickaxe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>38</td> <td>Item Bag</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>38</td> <td>Iron Fullhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>38</td> <td>Steel Platelegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>38</td> <td>Osmium Chainhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>38</td> <td>Magic Bow</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+            </table>
+
+            <br>
+
+            <table id="40">
+              <caption>Levels 40-49</caption>
+                <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th>Shards</th>
+                <th>Essence</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Gothite Axe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>King Maple Logs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Burgundy Cloth</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Air Essence</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Copper Platebody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Nelenite Helmet</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Gothite Bar</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Gothite Chainlegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>40</td> <td>Burgundy Wizard Hat</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>41</td> <td>Gothite Dagger</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>42</td> <td>Gothite Ore</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>42</td> <td>Nelenite Sword</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>42</td> <td>Nelenite Platelegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>42</td> <td>Water Essence</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>42</td> <td>Nelenite Chainbody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>42</td> <td>Gothite Pickaxe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>44</td> <td>Osmium Axe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>44</td> <td>Earth Essence</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>44</td> <td>Iron Platebody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>44</td> <td>Steel Fullhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>45</td> <td>Osmium Bar</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>45</td> <td>Osmium Dagger</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>45</td> <td>Osmium Chainlegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>46</td> <td>Osmium Pickaxe</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>46</td> <td>Fire Essence</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>46</td> <td>Gothite Helm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>46</td> <td>Gothite Platelegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>47</td> <td>Gothite Sword</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>48</td> <td>Osmium Ore</td> <td></td> <td></td><td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>48</td> <td>Gothite Chainbody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>48</td> <td>Steel Platebody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+            </table>
+
+            <br>
+
+            <table id="50">
+              <caption>Levels 50-59</caption>
+                <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th>Shards</th>
+                <th>Essence</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>50</td> <td>Magic Logs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>50</td> <td>Nelenite Fullhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>50</td> <td>Void Essence</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>50</td> <td>Osmium Platelegs</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>50</td> <td>Air Strike</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>52</td> <td>Nelenite Platebody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>52</td> <td>Osmium Sword</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>52</td> <td>Osmium Helmet</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>54</td> <td>Water Strike</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>54</td> <td>Osmium Chainbody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>56</td> <td>Town Teleport</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>56</td> <td>Gothite Fullhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>56</td> <td>Gothite Platebody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>58</td> <td>Earth Strike</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>59</td> <td>Cadgwith Teleport</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+            </table>
+
+            <br>
+
+            <table id="60">
+              <caption>Levels 60-69</caption>
+                <tr>
+                <th>Level</th>
+                <th>Item</th>
+                <th>Carbon</th>
+                <th>Shards</th>
+                <th>Essence</th>
+                <th>Exp.</th>
+              </tr>
+
+              <tr>
+                <td>60</td> <td>Osmium Platebody</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>62</td> <td>Fire Strike</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>62</td> <td>Osmium Fullhelm</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>65</td> <td>Tome of Collection</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+
+              <tr>
+                <td>65</td> <td>Island Teleport</td> <td></td> <td></td> <td></td> <td></td>
+              </tr>
+            </table>
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

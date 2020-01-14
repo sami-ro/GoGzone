@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Stores</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!--<style>
+
+    .store-image-tooltip a span {
+      display: none;
+      z-index: 1;
+
+    }
+
+    .store-image-tooltip a:hover {
+      cursor: default;
+    }
+
+    .store-image-tooltip a:hover span {
+      display: inline-block;
+      position: absolute;
+      bottom: 76.5%;
+      right: 0;
+      left: 0;
+    }
+
+    .tooltip-npc-image {
+      display: none;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltip-npc-image {
+      display: inline-block;
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      left: 110%;
+    }
+  </style>-->
+
+
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry, won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+
+          <div id="menu">
+            <a href="../index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content" id="skill-list">
+                <a href="../skills/melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="../skills/ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="../skills/magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="../skills/thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="../skills/woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="../skills/fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="../skills/mining.html"><button class="list-button">Mining</button></a>
+                <a href="../skills/smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="../skills/fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="../skills/cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="../skills/firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="../skills/alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="../skills/crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="../skills/construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="../world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="../exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+            <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+            <div class="dropdown-content" id="item-list">
+              <ul class="dropdown-list">
+                <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+                <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+                <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+                <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+                <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+                <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2 id="store-top">Stores</h2>
+          <p>
+            Jump to store:
+            <a href="#general">General</a> |
+            <a href="#melee">Melee</a> |
+            <a href="#magic">Magic</a> |
+            <a href="#archery">Archery</a> |
+            <a href="#fishing">Fishing</a> |
+            <a href="#woodcutting">Woodcutting</a> |
+            <a href="#mining">Mining</a> |
+            <a href="#crafting">Crafting</a> |
+            <a href="#alchemy">Alchemy</a> |
+            <a href="#metalsmith">Metalsmith</a> |
+            <a href="#clothing">Clothing</a></p>
+
+          <!-- General store with tooltip image
+          <h3 id="general">General Store</h3>
+          <p>The
+            <span class="store-image-tooltip">
+              <a class="tooltip">General Store Owner
+              <img class="tooltip-npc-image" src="../images/stores/magic-store.png">
+              </a>
+            </span>
+          can be found in the towns of Fiewon (30, 32), Hyrill (42, 169) and Bodiam (174, 180).</p>
+
+            <table style="margin-bottom: 5px;">
+              <caption>Items for Sale</caption>
+                <tr>
+                <th>Name</th>
+                <th>Price Per</th>
+                <th>Maximum Stock</th>
+              </tr>
+
+              <tr>
+                <td>Knife</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Matchbox</td>
+                <td>2</td>
+                <td>2000</td>
+              </tr>
+
+              <tr>
+                <td>Copper Axe</td>
+                <td>22</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Copper Pickaxe</td>
+                <td>40</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Fishing Net</td>
+                <td>3</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Hammer</td>
+                <td>5</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Saw</td>
+                <td>3</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Shrimp</td>
+                <td>5</td>
+                <td>10</td>
+              </tr>
+
+              <tr>
+                <td>Pestle & Mortar</td>
+                <td>4</td>
+                <td>10</td>
+              </tr>
+            </table>
+            <a href="#store-top">Back to Top</a> -->
+
+            <h3 id="general">General Store</h3>
+            <p>The General Store Owner can be found in the towns of Fiewon (30, 32), Hyrill (42, 169) and Bodiam (174, 180).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Knife</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Matchbox</td>
+                  <td>2</td>
+                  <td>2000</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Axe</td>
+                  <td>22</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Pickaxe</td>
+                  <td>40</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Fishing Net</td>
+                  <td>3</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Hammer</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Saw</td>
+                  <td>3</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Shrimp</td>
+                  <td>5</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Pestle & Mortar</td>
+                  <td>4</td>
+                  <td>10</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="melee">Melee Store</h3>
+            <p>The Melee Store Owner can be found in the town of Bodiam (179, 185).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Copper Dagger</td>
+                  <td>22</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Dagger</td>
+                  <td>63</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Steel Dagger</td>
+                  <td>129</td>
+                  <td>1</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Sword</td>
+                  <td>40</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Sword</td>
+                  <td>122</td>
+                  <td>2</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Helmet</td>
+                  <td>40</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Helmet</td>
+                  <td>122</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Chainlegs</td>
+                  <td>79</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Steel Helmet</td>
+                  <td>251</td>
+                  <td>1</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Full Helm</td>
+                  <td>63</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Full Helm</td>
+                  <td>182</td>
+                  <td>2</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Platebody</td>
+                  <td>99</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Platebody</td>
+                  <td>309</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Platelegs</td>
+                  <td>79</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Platelegs</td>
+                  <td>247</td>
+                  <td>5</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="archery">Archery Store</h3>
+            <p>The Archery Store Owner can be found in the towns of Cadgwith (161, 5) and Bodiam (172, 185).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Bow</td>
+                  <td>33</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Oak Bow</td>
+                  <td>45</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Ash Bow</td>
+                  <td>65</td>
+                  <td>1</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Arrows</td>
+                  <td>4</td>
+                  <td>500</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Arrows</td>
+                  <td>7</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Steel Arrows</td>
+                  <td>11</td>
+                  <td>50</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Chainhelm</td>
+                  <td>63</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Chainhelm</td>
+                  <td>182</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Chainlegs</td>
+                  <td>79</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Chainlegs</td>
+                  <td>247</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Chainbody</td>
+                  <td>99</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Chainbody</td>
+                  <td>309</td>
+                  <td>5</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="magic">Magic Store</h3>
+            <p>The Magic Store Owner can be found in the towns of Cadgwith (156, 14), Hyrill (39, 172).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Air Strike</td>
+                  <td>19</td>
+                  <td>500</td>
+                </tr>
+
+                <tr>
+                  <td>Water Strike</td>
+                  <td>28</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Earth Strike</td>
+                  <td>35</td>
+                  <td>50</td>
+                </tr>
+
+                <tr>
+                  <td>Fire Strike</td>
+                  <td>46</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Blue Wizard Hat</td>
+                  <td>51</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Green Wizard Hat</td>
+                  <td>115</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Blue Wizard Bottom</td>
+                  <td>69</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Green Wizard Bottom</td>
+                  <td>152</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Blue Wizard Top</td>
+                  <td>97</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Green Wizard Top</td>
+                  <td>196</td>
+                  <td>5</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="fishing">Fishing Store</h3>
+              <p>The Fishing Store Owner can be found in the town of Cadgwith (152, 5).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Fishing Net</td>
+                  <td>3</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Raw Shrimp</td>
+                  <td>3</td>
+                  <td>20</td>
+                </tr>
+
+                <tr>
+                  <td>Raw Sardine</td>
+                  <td>6</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Raw Herring</td>
+                  <td>14</td>
+                  <td>1</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="woodcutting">Woodcutting Store</h3>
+              <p>The Woodcutting Store Owner can be found in the towns of Fiewon (33, 38), Hyrill (24, 169).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Knife</td>
+                  <td>4</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Axe</td>
+                  <td>22</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Axe</td>
+                  <td>63</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Steel Axe</td>
+                  <td>129</td>
+                  <td>1</td>
+                </tr>
+
+                <tr>
+                  <td>Logs</td>
+                  <td>3</td>
+                  <td>20</td>
+                </tr>
+
+                <tr>
+                  <td>Oak Logs</td>
+                  <td>7</td>
+                  <td>6</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="mining">Mining Store</h3>
+              <p>The Mining Store Owner can be found in the town of Bodiam (186, 185).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Copper Pickaxe</td>
+                  <td>10</td>
+                  <td>40</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Pickaxe</td>
+                  <td>122</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Steel Pickaxe</td>
+                  <td>251</td>
+                  <td>1</td>
+                </tr>
+
+                <tr>
+                  <td>Copper Ore</td>
+                  <td>6</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Iron Ore</td>
+                  <td>5</td>
+                  <td>19</td>
+                </tr>
+
+                <tr>
+                  <td>Coal Ore</td>
+                  <td>37</td>
+                  <td>1</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="crafting">Crafting Store</h3>
+            <p>The Crafting Store Owner can be found in the towns of Hyrill (42, 172) and Bodiam (184, 180).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Needle</td>
+                  <td>2</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Thread</td>
+                  <td>2</td>
+                  <td>5000</td>
+                </tr>
+
+                <tr>
+                  <td>Blue Cloth</td>
+                  <td>14</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Green Cloth</td>
+                  <td>35</td>
+                  <td>1</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+            <h3 id="alchemy">Alchemy Store</h3>
+            <p>The Alchemy Store Owner can be found in the town of Cadgwith (168, 16).</p>
+
+              <table style="margin-bottom: 5px;">
+                <caption>Items for Sale</caption>
+                  <tr>
+                  <th>Name</th>
+                  <th>Price Per</th>
+                  <th>Maximum Stock</th>
+                </tr>
+
+                <tr>
+                  <td>Ash</td>
+                  <td>3</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Clay Pot</td>
+                  <td>6</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Air Essence</td>
+                  <td>10</td>
+                  <td>500</td>
+                </tr>
+
+                <tr>
+                  <td>Water Essence</td>
+                  <td>14</td>
+                  <td>350</td>
+                </tr>
+
+                <tr>
+                  <td>Earth Essence</td>
+                  <td>19</td>
+                  <td>200</td>
+                </tr>
+
+                <tr>
+                  <td>Fire Essence</td>
+                  <td>26</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Metal Essence</td>
+                  <td>30</td>
+                  <td>40</td>
+                </tr>
+
+                <tr>
+                  <td>Sharp Essence</td>
+                  <td>30</td>
+                  <td>50</td>
+                </tr>
+
+                <tr>
+                  <td>Force Essence</td>
+                  <td>30</td>
+                  <td>20</td>
+                </tr>
+
+                <tr>
+                  <td>Pestle & Mortar</td>
+                  <td>4</td>
+                  <td>10</td>
+                </tr>
+
+                <tr>
+                  <td>Air Shard</td>
+                  <td>0</td>
+                  <td>1000</td>
+                </tr>
+
+                <tr>
+                  <td>Water Shard</td>
+                  <td>0</td>
+                  <td>750</td>
+                </tr>
+
+                <tr>
+                  <td>Earth Shard</td>
+                  <td>0</td>
+                  <td>500</td>
+                </tr>
+
+                <tr>
+                  <td>Fire Shard</td>
+                  <td>0</td>
+                  <td>250</td>
+                </tr>
+
+                <tr>
+                  <td>Metal Shard</td>
+                  <td>0</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Void Shard</td>
+                  <td>2</td>
+                  <td>5</td>
+                </tr>
+
+                <tr>
+                  <td>Sharp Shard</td>
+                  <td>0</td>
+                  <td>100</td>
+                </tr>
+
+                <tr>
+                  <td>Force Shard</td>
+                  <td>0</td>
+                  <td>50</td>
+                </tr>
+
+                <tr>
+                  <td>Poison Shard</td>
+                  <td>0</td>
+                  <td>10</td>
+                </tr>
+              </table>
+              <a href="#store-top">Back to Top</a>
+
+          <h3 id="metalsmith">Metalsmith Store</h3>
+          <p>The Metalsmith Store Owner can be found in the towns of Fiewon (33, 32), Hyrill (21, 169) and Bodiam (174, 180).</p>
+
+          <table style="margin-bottom: 5px;">
+            <caption>Items for Sale</caption>
+              <tr>
+              <th>Name</th>
+              <th>Price Per</th>
+              <th>Maximum Stock</th>
+            </tr>
+
+            <tr>
+              <td>Hammer</td>
+              <td>5</td>
+              <td>10</td>
+            </tr>
+
+            <tr>
+              <td>Copper Bar</td>
+              <td>17</td>
+              <td>10</td>
+            </tr>
+
+            <tr>
+              <td>Iron Bar</td>
+              <td>56</td>
+              <td>2</td>
+            </tr>
+          </table>
+          <a href="#store-top">Back to Top</a>
+
+          <h3 id="clothing">Clothing Store</h3>
+          <p>The Clothing Store Owner can be found in the town of Fiewon (30, 38).</p>
+
+          <table style="margin-bottom: 5px;">
+            <caption>Items for Sale</caption>
+              <tr>
+              <th>Name</th>
+              <th>Price Per</th>
+              <th>Maximum Stock</th>
+            </tr>
+
+            <tr>
+              <td>Various Shirts and Pants</td>
+              <td>6</td>
+              <td>5</td>
+            </tr>
+          </table>
+          <a href="#store-top">Back to Top</a>
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

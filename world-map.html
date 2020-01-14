@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>GoGzone</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+          <div id="menu">
+            <a href="index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content" id="skill-list">
+                <a href="skills/melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="skills/ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="skills/magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="skills/thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="skills/woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="skills/fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="skills/mining.html"><button class="list-button">Mining</button></a>
+                <a href="skills/smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="skills/fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="skills/cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="skills/firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="skills/alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="skills/crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="skills/construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+  <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+  <div class="dropdown-content" id="item-list">
+    <ul class="dropdown-list">
+      <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+      <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+      <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+      <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+      <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+      <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+    </ul>
+  </div>
+</div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>World Map</h2>
+
+          <p>Click to open larger versions.</p>
+
+          <a href="images/world-map-large.png" target="_blank"><img style="width: 100%" src="images/world-map-small.png"></a>
+
+          <br>
+
+          <h3>Underground</h3>
+
+          <a href="images/underground-map-large.png" target="_blank"><img style="width: 100%" src="images/underground-map-small.png"></a>
+
+
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

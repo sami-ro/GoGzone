@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>GoGzone</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+          <div id="menu">
+            <a href="index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content" id="skill-list">
+                <a href="skills/melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="skills/ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="skills/magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="skills/thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="skills/woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="skills/fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="skills/mining.html"><button class="list-button">Mining</button></a>
+                <a href="skills/smithing.html"><button class="list-button">Smithing</button></a>
+                <a href="skills/fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="skills/cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="skills/firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="skills/alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="skills/crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="skills/construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+  <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+  <div class="dropdown-content" id="item-list">
+    <ul class="dropdown-list">
+      <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+      <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+      <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+      <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+      <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+      <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+    </ul>
+  </div>
+</div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Welcome!</h2>
+
+
+
+          <!--
+          <div style="background-color: #ccc; height:150px; border:1px solid #364156; overflow:auto;">
+            <h3 style="background-color: #364156; margin-top: 0;">Changelog</h2>
+            <p style="color: #000;"><strong>Thu 14.3.2019:</strong> Incineration table nearly finished, just missing rockfish and starslug.
+              <br>Added shards info to the <a href="skills/alchemy.html">Alchemy</a> page. Not yet finished.</p>
+          </div>
+        -->
+
+          <p>Here you'll find various information about <a href="https://guildsofgods.com/play" target="_blank">Guilds of Gods</a>. If you're new to the game, below you'll find some helpful
+            general information written by one of the developers. The site currently only has information about skills, but more content is coming. </p>
+
+          <h3>Getting Started</h3>
+
+          <p>GoG is an open world MMO with a lot of things to do, so it can be difficult getting a direction.
+            Upon logging into the game, you will see 3 interface bars. The top one is your controls for switching between adventurers.
+            The left one is for user details like chat and game messages. The right is the controls and details for your currently selected adventurer.</p>
+
+          <p>Clicking the icon of the bag on the right side bar will open the inventory, which will contain a pickaxe, axe, some coins, and food. You may use these to fight,
+            but it is recommended to get some armour first. You may purchase armour from the store within the nearby town to the top-left, or craft it yourself.</p>
+
+          <p>Mining and woodcutting provide a good income, especially when refining the resources gathered. Gathering these resources can be idled by building a construction
+            camp to gather and store a set amount of resources. For now, camps may be used to idle woodcutting, mining, and fishing; other idling features will be added soon.</p>
+
+          <p>It's a good idea to get your mining or woodcutting level going, or try thieving from chests to earn your first 10,000 coins. From there, unlock your 2nd adventurer so
+            you may explore while generating an income on your other adventurer.</p>
+
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

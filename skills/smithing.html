@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Smithing</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header">
+        <h1>GoGzone</h1>
+      </div>
+
+      <div id="content">
+
+        <div id="navleft">
+
+          <div id="search">
+            <form>
+            <input type="text" placeholder="Sorry, won't find anything...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+
+          <div id="menu">
+            <a href="../index.html"><button class="nav-button" type=button>Home</button></a>
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="myFunctionSkills()">Skills <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content-selected" id="skill-list">
+                <a href="melee.html"><button class="list-button">Melee Combat</button></a>
+                <a href="ranged.html"><button class="list-button">Ranged Combat</button></a>
+                <a href="magic.html"><button class="list-button">Magic Combat</button></a>
+                <a href="thieving.html"><button class="list-button">Thieving</button></a>
+                <a href="woodcutting.html"><button class="list-button">Woodcutting</button></a>
+                <a href="fletching.html"><button class="list-button">Fletching</button></a>
+                <a href="mining.html"><button class="list-button">Mining</button></a>
+                <a href="smithing.html"><button class="list-button list-button-selected">Smithing</button></a>
+                <a href="fishing.html"><button class="list-button">Fishing</button></a>
+                <a href="cooking.html"><button class="list-button">Cooking</button></a>
+                <a href="firemaking.html"><button class="list-button">Firemaking</button></a>
+                <a href="alchemy.html"><button class="list-button">Alchemy</button></a>
+                <a href="crafting.html"><button class="list-button">Crafting</button></a>
+                <a href="construction.html"><button class="list-button list-button-last">Construction</button></a>
+              </div>
+            </div>
+            <a href="../npcs/stores.html"><button class="nav-button" type=button>Stores</button></a>
+            <a href="../world-map.html"><button class="nav-button" type=button>World Map</button></a>
+            <a href="../exp-table.html"><button class="nav-button" type=button>Exp. Table</button></a>
+          </div>
+
+          <!--<div class="dropdown">
+            <button class="dropdown-button" onclick="myFunctionItems()">Items</button>
+            <div class="dropdown-content" id="item-list">
+              <ul class="dropdown-list">
+                <li class="list-item"><a href="skills/melee.html">Melee Combat</a></li>
+                <li class="list-item"><a href="skills/ranged.html">Ranged Combat</a></li>
+                <li class="list-item"><a href="skills/magic.html">Magic Combat</a></li>
+                <li class="list-item"><a href="skills/thieving.html">Thieving</a></li>
+                <li class="list-item"><a href="skills/woodcutting.html">Woodcutting</a></li>
+                <li class="list-item"><a href="skills/fletching.html">Fletching</a></li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+
+        <script>
+        function myFunctionSkills() {
+          document.getElementById("skill-list").classList.toggle("show-selected");
+        }
+
+        function myFunctionItems() {
+          document.getElementById("item-list").classList.toggle("show");
+        }
+
+        </script>
+
+        <div id="main">
+          <h2>Smithing</h2>
+          <p>Smithing is used to make equipment out of ores gathered by <strong><a href="mining.html">Mining</a></strong>.</p>
+
+          <h3>Smelting</h3>
+          <p>Before you can make your ores into equipment you first need to smelt them into bars using a furnace.</p>
+
+            <table>
+                <tr>
+                <th>Level</th>
+                <th>Bar Type</th>
+                <th>Materials Needed (quantity)</th>
+                <th>Exp.</th>
+                <th>Bar</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Copper</td>
+                <td>Copper Ore (2)</td>
+                <td>25</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/copper-bar.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Iron</td>
+                <td>Iron Ore (2)</td>
+                <td>50</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/iron-bar.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>20</td>
+                <td>Steel</td>
+                <td>Iron Ore (2) + Coal (1)</td>
+                <td>75</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/steel-bar.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>30</td>
+                <td>Nelenite</td>
+                <td>Nelenite Ore (2) + Coal (2)</td>
+                <td>100</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/nelenite-bar.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>40</td>
+                <td>Gothite</td>
+                <td>Gothite Ore (2) + Coal (2)</td>
+                <td>125</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/gothite-bar.png"></div></td>
+              </tr>
+
+              <tr>
+                <td>50</td>
+                <td>Osmium</td>
+                <td>Osmium (2) + Coal (3)</td>
+                <td>150</td>
+                <td><div class ="table-image-container"><img class="table-image" src="../images/resources/osmium-bar.png"></div></td>
+              </tr>
+            </table>
+
+            <h3>Smithing</h3>
+            <p>Once you have bars and a hammer (can be bought from the General or Metalsmith Store for 5 coins) you can start making equipment. Simply use a bar on an anvil
+                to bring up the list of equipment you can make. Experience gain depends on how many of which tier bar is used. Per used bar you will get experience equivalent of the
+                experience you get for smelting a bar of that tier. Below is a table depicting the required amount of bars and the level needed to make a certain equipment.</p>
+
+            <table>
+                <tr>
+                <th>Item</th>
+                <th># of bars</th>
+                <th>Copper</th>
+                <th>Iron</th>
+                <th>Steel</th>
+                <th>Nelenite</th>
+                <th>Gothite</th>
+                <th>Osmium</th>
+              </tr>
+
+              <tr>
+                <td>Axe</td>
+                <td>1</td>
+                <td>1</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+                <td>40</td>
+                <td>50</td>
+              </tr>
+
+              <tr>
+                <td>Dagger</td>
+                <td>1</td>
+                <td>1</td>
+                <td>11</td>
+                <td>21</td>
+                <td>31</td>
+                <td>41</td>
+                <td>51</td>
+              </tr>
+
+              <tr>
+                <td>Arrowheads (10)</td>
+                <td>1</td>
+                <td>2</td>
+                <td>12</td>
+                <td>22</td>
+                <td>32</td>
+                <td>42</td>
+                <td>52</td>
+              </tr>
+
+              <tr>
+                <td>Pickaxe</td>
+                <td>2</td>
+                <td>3</td>
+                <td>13</td>
+                <td>23</td>
+                <td>33</td>
+                <td>43</td>
+                <td>53</td>
+              </tr>
+
+              <tr>
+                <td>Helm</td>
+                <td>2</td>
+                <td>4</td>
+                <td>14</td>
+                <td>24</td>
+                <td>34</td>
+                <td>44</td>
+                <td>54</td>
+              </tr>
+
+              <tr>
+                <td>Sword</td>
+                <td>3</td>
+                <td>5</td>
+                <td>15</td>
+                <td>25</td>
+                <td>35</td>
+                <td>45</td>
+                <td>55</td>
+              </tr>
+
+              <tr>
+                <td>Full helm</td>
+                <td>3</td>
+                <td>6</td>
+                <td>16</td>
+                <td>26</td>
+                <td>36</td>
+                <td>46</td>
+                <td>56</td>
+              </tr>
+
+              <tr>
+                <td>Plate legs</td>
+                <td>4</td>
+                <td>7</td>
+                <td>17</td>
+                <td>27</td>
+                <td>37</td>
+                <td>47</td>
+                <td>57</td>
+              </tr>
+
+              <tr>
+                <td>Chain helm</td>
+                <td>3</td>
+                <td>8</td>
+                <td>18</td>
+                <td>28</td>
+                <td>38</td>
+                <td>48</td>
+                <td>58</td>
+              </tr>
+
+              <tr>
+                <td>Chain legs</td>
+                <td>4</td>
+                <td>9</td>
+                <td>19</td>
+                <td>29</td>
+                <td>39</td>
+                <td>49</td>
+                <td>59</td>
+              </tr>
+
+              <tr>
+                <td>Chain body</td>
+                <td>5</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+                <td>40</td>
+                <td>50</td>
+                <td>60</td>
+              </tr>
+
+              <tr>
+                <td>Plate body</td>
+                <td>5</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+                <td>40</td>
+                <td>50</td>
+                <td>60</td>
+              </tr>
+            </table>
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        For feedback and/or improvement suggestions you can contact me on Discord: Inspiria#7211
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>
